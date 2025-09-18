@@ -87,8 +87,8 @@
 
     // Load SVG and JSON metadata
     Promise.all([
-       fetch('./Media/Map-asset.svg').then(r => r.text()),
-      fetch('./stalls.json').then(r => r.json())
+       fetch('/Media/Map-asset.svg').then(r => r.text()),
+      fetch('/stalls.json').then(r => r.json())
     ])
 
     .then(([svgText, stallData]) => {
@@ -148,6 +148,7 @@
 
 </body>
 </html>
+
 
 
 
