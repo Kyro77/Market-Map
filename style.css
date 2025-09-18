@@ -21,4 +21,65 @@ header img {
 
 body{
     margin-top: 10rem;
+
 }
+
+
+    #map-wrapper {
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+      touch-action: none;
+      position: relative;
+      margin: 0 auto;
+      cursor: grab;
+    }
+
+    #map-container {
+      width: 100%;
+      height: 100%;
+      transform-origin: 0 0;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    #info-box {
+      position: fixed;
+      top: 45vh;
+      right: 20px;
+      width: 300px;
+      background: #fff;
+      border: 2px solid #a4634e;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      padding: 20px;
+      display: none;
+      z-index: 1000;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #info-box h2{
+      margin-top:0px ;
+    }
+
+    #info-box.active {
+      display: block;
+    }
+
+    #close-btn {
+      background: #a4634e;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    #close-btn:hover {
+      background: #833d2e;
+    }
