@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Map</title>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    #map-wrapper {
+      width: 100%;
+      height: 80vh;
+      overflow: hidden;
+      touch-action: none;
+      position: relative;
+      margin: 0 auto;
+      cursor: grab;
+    }
+
+    #map-container {
+      width: 100%;
+      height: 100%;
+      transform-origin: 0 0;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    #info-box {
+      position: fixed;
+      top: 45vh;
+      right: 20px;
+      width: 300px;
+      background: #fff;
+      border: 2px solid #a4634e;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      padding: 20px;
+      display: none;
+      z-index: 1000;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #info-box h2{
+      margin-top:0px ;
+    }
+
+    #info-box.active {
+      display: block;
+    }
+
+    #close-btn {
+      background: #a4634e;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    #close-btn:hover {
+      background: #833d2e;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="/Media/Screenshot 2025-08-14 105531.png" alt="Adelaide Central Market Logo">
+  </header>
+
+  <div id="map-wrapper">
+    <div id="map-container"></div>
+  </div>
+
+  <!-- Info Box -->
+  <div id="info-box">
+    <button id="close-btn">Close</button>
+    <h2 id="stall-name"></h2>
+    <p id="stall-tags"></p>
+  </div>
+
+  <script>
+    const mapWrapper = document.getElementById('map-wrapper');
+    const mapContainer = document.getElementById('map-container');
+    const infoBox = document.getElementById('info-box');
+    const stallNameEl = document.getElementById('stall-name');
+    const stallTagsEl = document.getElementById('stall-tags');
+    const closeBtn = document.getElementById('close-btn');
+
+    let isPanning = false;
+    let startX = 0;
+    let startY = 0;
+    let translateX = 0;
+    let translateY = 0;
+    let scale = 1;
+
+    function updateTransform() {
+      mapContainer.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    }
+
+    // Mouse pan
+    mapWrapper.addEventListener('mousedown', e => {
+      isPanning = true;
+      startX = e.clientX - translateX;
+      startY = e.clientY - translateY;
+      mapWrapper.style.cursor = 'grabbing';
+    });
+    mapWrapper.addEventListener('mouseup', () => { isPanning = false; mapWrapper.style.cursor = 'grab'; });
+    mapWrapper.addEventListener('mouseleave', () => isPanning = false);
+    mapWrapper.addEventListener('mousemove', e => {
+      if (!isPanning) return;
+      translateX = e.clientX - startX;
+      translateY = e.clientY - startY;
+      updateTransform();
+    });
+
+    // Touch pan
+    mapWrapper.addEventListener('touchstart', e => {
+      if(e.touches.length === 1){
+        isPanning = true;
+        startX = e.touches[0].clientX - translateX;
+        startY = e.touches[0].clientY - translateY;
+      }
+    });
+    mapWrapper.addEventListener('touchmove', e => {
+      if(!isPanning) return;
+      translateX = e.touches[0].clientX - startX;
+      translateY = e.touches[0].clientY - startY;
+      updateTransform();
+    });
+    mapWrapper.addEventListener('touchend', () => isPanning = false);
+
+    // Zoom with wheel
+    mapWrapper.addEventListener('wheel', e => {
+      e.preventDefault();
+      const scaleAmount = -e.deltaY * 0.001;
+      scale += scaleAmount;
+      scale = Math.min(Math.max(0.5, scale), 3); // min 0.5x, max 3x
+      updateTransform();
+    });
+
+    // Load SVG and JSON metadata
+    Promise.all([
+      fetch('Media/Map-asset.svg').then(r => r.text()),
+      fetch('stalls.json').then(r => r.json())
+    ])
+    .then(([svgText, stallData]) => {
+      mapContainer.innerHTML = svgText;
+
+      // Attach metadata from JSON to each stall <g>
+      Object.keys(stallData).forEach(stallId => {
+        const stallEl = document.getElementById(stallId);
+        if (stallEl) {
+          stallEl.classList.add('stall');
+          stallEl.dataset.name = stallData[stallId].name;
+          stallEl.dataset.tags = stallData[stallId].tags.join(',');
+        }
+      });
+
+      const stalls = mapContainer.querySelectorAll('.stall');
+
+      // Click to highlight + show info box
+      stalls.forEach(stall => {
+        stall.addEventListener('click', () => {
+          stalls.forEach(s => {
+            s.style.filter = 'grayscale(100%)';
+            const r = s.querySelector('rect');
+            if (r) { r.style.outline = 'none'; r.style.transition = 'none'; }
+          });
+
+          // Highlight clicked stall (rect only)
+          stall.style.filter = 'none';
+          const rect = stall.querySelector('rect');
+          if (rect) {
+            rect.style.outline = '3px solid #a4634e';
+            rect.style.outlineOffset = '2px';
+            rect.style.transition = 'none';
+          }
+
+          // Show info box
+          stallNameEl.textContent = stall.dataset.name;
+          stallTagsEl.textContent = stall.dataset.tags ? "Tags: " + stall.dataset.tags : "No tags available.";
+          infoBox.classList.add('active');
+        });
+      });
+
+      // Close button
+      closeBtn.addEventListener('click', () => {
+        infoBox.classList.remove('active');
+        stalls.forEach(s => {
+          s.style.filter = 'none';
+          const r = s.querySelector('rect');
+          if (r) { r.style.outline = 'none'; r.style.transition = 'none'; }
+        });
+      });
+
+    })
+    .catch(err => console.error('Error loading SVG or JSON:', err));
+
+  </script>
+
+</body>
+</html>
