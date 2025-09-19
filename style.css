@@ -1,85 +1,166 @@
+/* Global Styles */
 html, body {
   height: fit-content;
   margin: 0;
-  background-color: #a4634e !important;
+  background-color: #e9dfd4;
+  font-family: Helvetica, Arial, sans-serif;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
 }
 
+body {
+  padding: 10rem 22rem; /* adjust as needed for spacing */
+}
 
+/* Header */
 header img {
   width: 100vw;
   height: auto;
   position: fixed;
   top: 0;
   left: 0;
-  
-}
- 
-
-body{
-    margin-top: 10rem;
-
+  z-index: 1000;
 }
 
+/* Map Container */
+#map-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh;
+  overflow: hidden;
+  touch-action: none;
+  position: relative;
+  margin: 0 auto 40px;
+  cursor: grab;
+}
 
-    #map-wrapper {
-      width: 100%;
-      height: 80vh;
-      overflow: hidden;
-      touch-action: none;
-      position: relative;
-      margin: 0 auto;
-      cursor: grab;
-    }
+#map-container {
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 0;
+}
 
-    #map-container {
-      width: 100%;
-      height: 100%;
-      transform-origin: 0 0;
-    }
+svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 
-    svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
+/* Info Box */
+#info-box {
+  position: fixed;
+  top: 45vh;
+  right: 20px;
+  width: 300px;
+  background: #fff;
 
-    #info-box {
-      position: fixed;
-      top: 45vh;
-      right: 20px;
-      width: 300px;
-      background: #fff;
-      border: 2px solid #a4634e;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      padding: 20px;
-      display: none;
-      z-index: 1000;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  padding: 20px;
+  display: none;
+  z-index: 1000;
+  font-family: Helvetica, Arial, sans-serif;
+}
 
-    #info-box h2{
-      margin-top:0px ;
-    }
+#info-box h2 {
+  margin-top: 0;
+}
 
-    #info-box.active {
-      display: block;
-    }
+#info-box.active {
+  display: block;
+}
 
-    #close-btn {
-      background: #a4634e;
-      color: #fff;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      float: right;
-    }
+/* Close Button */
+#close-btn {
+  background: #a4634e;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  transition: background 0.3s ease;
+}
 
-    #close-btn:hover {
-      background: #833d2e;
-    }
+#close-btn:hover {
+  background: #833d2e;
+}
+
+/* Tag Buttons */
+#tag-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#tag-buttons button {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px 24px;
+  border-radius: 10000px;
+  border: 1px solid #000;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  transform-origin: center;
+}
+
+#tag-buttons button:hover {
+  transform: scale(1.1);
+}
+
+/* Search Styles */
+#search-wrapper {
+  position: relative;
+  width: 100%;               /* match parent width */
+  max-width: 1200px;         /* match #map-wrapper max-width */
+  margin: 20px 0;            /* spacing above/below */
+  align-self: flex-start;    /* align to left */
+}
+
+#search-input {
+  background-color: transparent;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px 24px;
+  border-radius: 10000px;
+  border: 1px solid #000;
+  width: 100%;               /* fill the wrapper */
+  box-sizing: border-box;
+}
+
+#search-input:focus {
+  outline: none;           /* Remove default focus outline */
+  box-shadow: none;        /* Remove any shadow on focus */
+  border-color: #000;      /* Keep border consistent */
+}
+
+#search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 100;
+  display: none;
+}
+
+#search-dropdown div {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#search-dropdown div:hover {
+  background: #a4634e;
+  color: #fff;
+}
