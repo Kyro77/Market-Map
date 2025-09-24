@@ -1,78 +1,540 @@
 {
-  "WR6": { "name": "Asian Gourmet", "tags": ["Cafes & Eateries"] },
-  "S63": { "name": "Atlas Continental", "tags": ["Cafes & Eateries"] },
-  "S56-57": { "name": "Aubergine's", "tags": ["Fruit & Veg"] },
-  "S41": { "name": "Asian Green Grocer", "tags": ["Fruit & Veg"] },
-  "S5-6": { "name": "Angelakis Bros", "tags": ["Meat, Poultry & Seafood"] },
-  "S39-40": { "name": "Big Table", "tags": ["Cafes & Eateries"] },
-  "S60": { "name": "Barossa Fine Foods", "tags": ["Meat, Poultry & Seafood"] },
-  "S18-19": { "name": "Con's Fine Food", "tags": ["Continental & Cheese"] },
-  "S71": { "name": "Corner Deli", "tags": ["Continental & Cheese"] },
-  "S72": { "name": "Central Organic", "tags": ["Fruit & Veg"] },
-  "S20-21": { "name": "Coco's Fruit and Vegetables", "tags": ["Fruit & Veg"] },
-  "WR7": { "name": "Cappo's Fish Market", "tags": ["Meat, Poultry & Seafood"] },
-  "H1": { "name": "Central Market Books", "tags": ["Non-Produce"] },
-  "S7": { "name": "Central Market Flowers", "tags": ["Non-Produce"] },
-  "S70": { "name": "Charlesworth Nuts", "tags": ["Nuts Confectionery & Coffee"] },
-  "WR4": { "name": "Charcuterie Traiteur", "tags": ["Continental & Cheese"] },
-  "GR43": { "name": "Cumbia Bar Kitchen", "tags": ["Cafes & Eateries"] },
-  "S45": { "name": "Dough", "tags": ["Bakeries & Patisserie"] },
-  "S9": { "name": "Fleurieu Milk Co.", "tags": ["Specialty Food"] },
-  "S12": { "name": "Fair Seafood", "tags": ["Meat, Poultry & Seafood"] },
-  "S42": { "name": "Gourmet to Go", "tags": ["Bakeries & Patisserie"] },
-  "S14": { "name": "Grind Roast Masters Central Market", "tags": ["Nuts Confectionery & Coffee"] },
-  "S43": { "name": "Gewürzhaus", "tags": ["Specialty Food"] },
-  "S34-36": { "name": "House of Organics", "tags": ["Fruit & Veg"] },
-  "S73-74": { "name": "House of Health", "tags": ["Specialty Food"] },
-  "GO46-48": { "name": "Haigh's Chocolates", "tags": ["Nuts Confectionery & Coffee"] },
-  "S38": { "name": "Jagger Fine Foods", "tags": ["Specialty Food"] },
-  "S69": { "name": "Jamu", "tags": ["Specialty Food"] },
-  "S17": { "name": "Kangaroo Island Stall", "tags": ["Specialty Food"] },
-  "WR1-2": { "name": "Lucia's Pizza & Spaghetti Bar", "tags": ["Cafes & Eateries"] },
-  "S10": { "name": "Le Souk", "tags": ["Cafes & Eateries"] },
-  "WR3": { "name": "Lucia's Fine Foods", "tags": ["Continental & Cheese"] },
-  "S2": { "name": "Les Deux Coqs", "tags": ["Continental & Cheese"] },
-  "S23-24": { "name": "Let Them Eat", "tags": ["Cafes & Eateries"] },
-  "GO52-54": { "name": "Marino Meat & Food Store", "tags": ["Meat, Poultry & Seafood"] },
-  "S13": { "name": "M&M's Fruit Mart", "tags": ["Fruit & Veg"] },
-  "S47-48": { "name": "McMahon's Fruit and Veg", "tags": ["Fruit & Veg"] },
-  "S53-54": { "name": "Michael's Fruit and Veg", "tags": ["Fruit & Veg"] },
-  "S68": { "name": "Mushroom Man's Mushroom Shop", "tags": ["Specialty Food"] },
-  "S15": { "name": "Meat at The Market", "tags": ["Meat, Poultry & Seafood"] },
-  "GO44": { "name": "Mr Cheese", "tags": ["Cafes & Eateries"] },
-  "GR47-51": { "name": "O'Connell's Meats", "tags": ["Meat, Poultry & Seafood"] },
-  "S16": { "name": "OMG Donuts", "tags": ["Pop-Up"] },
-  "S66": { "name": "Providore", "tags": ["Bakeries & Patisserie"] },
-  "PIR": { "name": "Producer in Residence", "tags": ["Pop-Up"] },
-  "WR5": { "name": "Photoco Camera House", "tags": ["Non-Produce"] },
-  "S30-31": { "name": "Pick Me Fresh", "tags": ["Fruit & Veg"] },
-  "S37": { "name": "Rommy's Market Garden", "tags": ["Fruit & Veg"] },
-  "S3-4": { "name": "Real Falafel", "tags": ["Cafes & Eateries"] },
-  "S25": { "name": "Skala Artisan Bakers", "tags": ["Bakeries & Patisserie"] },
-  "S1": { "name": "Sunmi's Sushi", "tags": ["Cafes & Eateries"] },
-  "S46": { "name": "Say Cheese", "tags": ["Continental & Cheese"] },
-  "S44": { "name": "Smelly Cheese Co.", "tags": ["Continental & Cheese"] },
-  "S75": { "name": "Sustainable Co.", "tags": ["Specialty Food"] },
-  "S76": { "name": "SiSea", "tags": ["Cafes & Eateries"] },
-  "GR45": { "name": "Saudade Portuguese Tarts", "tags": ["Bakeries & Patisserie"] },
-  "S11": { "name": "Smiley's Tuckshop", "tags": ["Cafes & Eateries"] },
-  "S52": { "name": "SA Central Fresh", "tags": ["Fruit & Veg"] },
-  "S50-51": { "name": "The Market Bread Bar", "tags": ["Bakeries & Patisserie"] },
-  "S22": { "name": "The Mettwurst Shop", "tags": ["Continental & Cheese"] },
-  "S32": { "name": "The Adelaide Nut", "tags": ["Nuts Confectionery & Coffee"] },
-  "S58-59": { "name": "The Coffee Bean Shop", "tags": ["Nuts Confectionery & Coffee"] },
-  "S33": { "name": "The Old Lolly Shop", "tags": ["Nuts Confectionery & Coffee"] },
-  "S61": { "name": "The Olive Tree", "tags": ["Specialty Food"] },
-  "S26-28": { "name": "Thompson's Fruit & Veg", "tags": ["Fruit & Veg"] },
-  "S8": { "name": "The Turkish Delight", "tags": ["Nuts Confectionery & Coffee"] },
-  "I-D": { "name": "The Market Stall", "tags": ["Utilitys"] },
-  "S62": { "name": "Vegas Poultry", "tags": ["Meat, Poultry & Seafood"] },
-  "S49": { "name": "Wills & Daniel", "tags": ["Fruit & Veg"] },
-  "S67": { "name": "YoYo Yoghurt & Smoothie Bar", "tags": ["Specialty Food"] },
-  "GO56": { "name": "Zuma Caffe", "tags": ["Cafes & Eateries"] },
-  "T-WR-1": { "name": "Bathroom", "tags": ["Utilitys"] },
-  "T-WR-2": { "name": "Bathroom", "tags": ["Utilitys"] },
-  "C-K": { "name": "Community Kitchen", "tags": ["Utilitys"] },
-  "S55": { "name": "Vacant", "tags": [""] }
+  "WR6": {
+    "name": "Asian Gourmet",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/0ed436d4c5eb174be54b8f524c501b05.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/asian-gourmet/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S63": {
+    "name": "Atlas Continental",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2020/05/marty.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/atlas-continental/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: CLOSED\nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S56-57": {
+    "name": "Aubergine's",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/photoeditorsdk-export-9.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/aubergines/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S41": {
+    "name": "Asian Green Grocer",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-1.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/asian-green-grocer/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S5-6": {
+    "name": "Angelakis Bros",
+    "tags": ["Meat, Poultry & Seafood"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2020/12/ange.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/angelakis/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S39-40": {
+    "name": "Big Table",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/125341098_3221772807932680_380315291562136126_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/big-table/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: CLOSED\nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S60": {
+    "name": "Barossa Fine Foods",
+    "tags": ["Meat, Poultry & Seafood"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/file-263-scaled.jpeg",
+    "url": "https://adelaidecentralmarket.com.au/traders/barossa-fine-foods/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S18-19": {
+    "name": "Con's Fine Food",
+    "tags": ["Continental & Cheese"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/101496928_586336212314012_2682688345482280872_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/cons-fine-food/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S71": {
+    "name": "Corner Deli",
+    "tags": ["Continental & Cheese"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/ACM-The-Corner-Store-4878-scaled.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/corner-deli/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S72": {
+    "name": "Central Organic",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/stefan.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/central-organic/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S20-21": {
+    "name": "Coco's Fruit and Vegetables",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-2.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/cocos-fruit-vegetables/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "WR7": {
+    "name": "Cappo's Fish Market",
+    "tags": ["Meat, Poultry & Seafood"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-4.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/cappos-fish-market/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "H1": {
+    "name": "Central Market Books",
+    "tags": ["Non-Produce"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/68893093_413676719253165_7378532390959205303_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/central-market-books/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S7": {
+    "name": "Central Market Flowers",
+    "tags": ["Non-Produce"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/pete.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/central-market-flowers/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S70": {
+    "name": "Charlesworth Nuts",
+    "tags": ["Nuts Confectionery & Coffee"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-5.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/charlesworth-nuts/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "WR4": {
+    "name": "Charcuterie Traiteur",
+    "tags": ["Continental & Cheese"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-6.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/charcuterie-traiteur/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "GR43": {
+    "name": "Cumbia Bar Kitchen",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/07/Untitled-design-7.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/cumbia/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S45": {
+    "name": "Dough",
+    "tags": ["Bakeries & Patisserie"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/122204354_393184288376115_4248401127663683488_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/dough-2/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S9": {
+    "name": "Fleurieu Milk Co.",
+    "tags": ["Specialty Food"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/03/Capture.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/fleurieu-milk-co/",
+    "info": "Monday: 9:00am to 5:30pm\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S12": {
+    "name": "Fair Seafood",
+    "tags": ["Meat, Poultry & Seafood"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2023/12/H-Trumble_ACMarkets_030.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/fair-seafood/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: CLOSED\nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S42": {
+    "name": "Gourmet to Go",
+    "tags": ["Bakeries & Patisserie"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-9.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/gourmet-to-go/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: CLOSED\nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S14": {
+    "name": "Grind Roast Masters Central Market",
+    "tags": ["Nuts Confectionery & Coffee"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/AYD96s_F-scaled.jpeg",
+    "url": "https://adelaidecentralmarket.com.au/traders/the-grind-central/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S43": {
+    "name": "Gewürzhaus",
+    "tags": ["Specialty Food"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2020/10/014-scaled.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/gewurzhaus/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S34-36": {
+    "name": "House of Organics",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/07/DSC_0072V2.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/house-organics-sustainably-grown-produce/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S73-74": {
+    "name": "House of Health",
+    "tags": ["Specialty Food"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/20240125_123600-scaled-e1718334403159.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/house-of-health/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "GO46-48": {
+    "name": "Haigh's Chocolates",
+    "tags": ["Nuts Confectionery & Coffee"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2021/06/Haighs.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/haighs-chocolates/",
+    "info": "Monday: 8:30am to 5:30pm\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S38": {
+    "name": "Jagger Fine Foods",
+    "tags": ["Specialty Food"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/GSA_9104-scaled.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/jagger-fine-foods/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S69": {
+    "name": "Jamu",
+    "tags": ["Specialty Food"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2025/08/Screenshot-2025-08-07-132329.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/jamu/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S17": {
+    "name": "Kangaroo Island Stall",
+    "tags": ["Specialty Food"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/IMG_4088-scaled.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/kangaroo-island-stall/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "WR1-2": {
+    "name": "Lucia's Pizza & Spaghetti Bar",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/96834859_683839252445204_8430508414666598149_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/lucias-pizza-bar/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S10": {
+    "name": "Le Souk",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-12.jpg",
+    "url": "",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "WR3": {
+    "name": "Lucia's Fine Foods",
+    "tags": ["Continental & Cheese"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/03/91402793_257941075370092_4637050441399672876_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/lucias-fine-foods/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S2": {
+    "name": "Les Deux Coqs",
+    "tags": ["Continental & Cheese"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/04/Untitled-design-13.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/les-deux-coqs/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S23-24": {
+    "name": "Let Them Eat",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2021/09/let.jpeg",
+    "url": "https://adelaidecentralmarket.com.au/traders/let-them-eat/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "GO52-54": {
+    "name": "Marino Meat & Food Store",
+    "tags": ["Meat, Poultry & Seafood"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/01/75358242_123487525378327_2041583830031828829_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/marino-meats/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S13": {
+    "name": "M&M's Fruit Mart",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2025/08/Screenshot-2025-08-07-131533.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/mms-fruit-mart/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S47-48": {
+    "name": "McMahon's Fruit and Veg",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/McMahons-1-scaled.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/mcmahons-fruit-veg/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S53-54": {
+    "name": "Michael's Fruit and Veg",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/michaels-fruit-veg/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S68": {
+    "name": "Mushroom Man's Mushroom Shop",
+    "tags": ["Specialty Food"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/range-of-traders-open-today-1.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/mushroom-mans-mushroom-shop/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S15": {
+    "name": "Meat at The Market",
+    "tags": ["Meat, Poultry & Seafood"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/139737332_131928065425925_8094915840665683110_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/meat-at-the-market/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "GO44": {
+    "name": "Mr Cheese",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "",
+    "url": "https://adelaidecentralmarket.com.au/traders/mr-cheese/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "GR47-51": {
+    "name": "O'Connell's Meats",
+    "tags": ["Meat, Poultry & Seafood"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-14.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/oconnells-meat/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S16": {
+    "name": "OMG Donuts",
+    "tags": ["Pop-Up"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2024/11/370382418_693533806149601_7927577675176010321_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/omg-donuts/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S66": {
+    "name": "Providore",
+    "tags": ["Bakeries & Patisserie"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-16.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/providore/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "PIR": {
+    "name": "Producer in Residence",
+    "tags": ["Pop-Up"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2024/06/IMG_2039-scaled.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/producer-in-residence/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "WR5": {
+    "name": "Photoco Camera House",
+    "tags": ["Non-Produce"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/S0CxFhSS.jpeg",
+    "url": "https://adelaidecentralmarket.com.au/traders/photoco-camera-house/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S30-31": {
+    "name": "Pick Me Fresh",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/03/100573596_592425474710064_8703974332014446103_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/pick-me-fresh/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S37": {
+    "name": "Rommy's Market Garden",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-17.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/rommys-market-garden/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S3-4": {
+    "name": "Real Falafel",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2019/09/Untitled-design-68.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/real-falafel/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "GR45": {
+    "name": "Saudade Portuguese Tarts",
+    "tags": ["Bakeries & Patisserie"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2022/03/range-of-traders-open-today-1.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/saudade-portuguese-tarts/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S25": {
+    "name": "Skala Artisan Bakers",
+    "tags": ["Bakeries & Patisserie"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2025/08/Screenshot-2025-08-07-131324.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/skala/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S1": {
+    "name": "Sunmi's Sushi",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/range-of-traders-open-today.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/sunmis-sushi/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S46": {
+    "name": "Say Cheese",
+    "tags": ["Continental & Cheese"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/20838631_105402746854776_6291085576250589184_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/say-cheese/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S44": {
+    "name": "Smelly Cheese Co.",
+    "tags": ["Continental & Cheese"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-21.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/smelly-cheese-shop/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S75": {
+    "name": "Sustainable Co.",
+    "tags": ["Specialty Food"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2021/02/136071069_424484268898727_7752450384788782057_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/sustainable-co/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S76": {
+    "name": "SiSea",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2021/11/sisea-2.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/sisea/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S11": {
+    "name": "Smiley's Tuckshop",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2023/04/Untitled-design-5.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/smileys-tuckshop/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S52": {
+    "name": "SA Central Fresh",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2025/08/IMG_1869-scaled.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/sa-central-fresh/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S50-51": {
+    "name": "The Market Bread Bar",
+    "tags": ["Bakeries & Patisserie"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/theo-bread-bar.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/market-bread-bar/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S22": {
+    "name": "The Mettwurst Shop",
+    "tags": ["Continental & Cheese"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-20.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/the-mettwurst-shop/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S32": {
+    "name": "The Adelaide Nut",
+    "tags": ["Nuts Confectionery & Coffee"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-22.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/the-adelaide-nut/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S58-59": {
+    "name": "The Coffee Bean Shop",
+    "tags": ["Nuts Confectionery & Coffee"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/120248200_625797468300845_5504229519632953410_n.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/coffee-bean-shop/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S33": {
+    "name": "The Old Lolly Shop",
+    "tags": ["Nuts Confectionery & Coffee"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/OldLollyShopJessicaClarkAdlCM0489-scaled.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/old-lolly-shop/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S61": {
+    "name": "The Olive Tree",
+    "tags": ["Specialty Food"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/prEvRRSW-scaled.jpeg",
+    "url": "https://adelaidecentralmarket.com.au/traders/the-olive-tree/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S26-28": {
+    "name": "Thompson's Fruit & Veg",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/03/Untitled-design-55.png",
+    "url": "https://adelaidecentralmarket.com.au/traders/thompsons-fruit-veg/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S8": {
+    "name": "The Turkish Delight",
+    "tags": ["Nuts Confectionery & Coffee"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/11/IMG-2598_720x.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/the-turkish-delight/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "I-D": {
+    "name": "The Market Stall",
+    "tags": ["Utilities"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2021/06/Capture.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/the-market-stall/",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S62": {
+    "name": "Vegas Poultry",
+    "tags": ["Meat, Poultry & Seafood"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/Untitled-design-4-1.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/vegas-poultry/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S49": {
+    "name": "Wills & Daniel",
+    "tags": ["Fruit & Veg"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/DSC_0010.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/wills-and-daniel/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "S67": {
+    "name": "YoYo Yoghurt & Smoothie Bar",
+    "tags": ["Specialty Food"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/IMG_9500-scaled-e1707519718621.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/yoyo-yoghurt-smoothie-bar/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "GO56": {
+    "name": "Zuma Caffe",
+    "tags": ["Cafes & Eateries"],
+    "thumbnail": "https://adelaidecentralmarket.com.au/site/wp-content/uploads/2018/02/ACM_Image-Credit_Julian-Cebo-1330-scaled.jpg",
+    "url": "https://adelaidecentralmarket.com.au/traders/zuma-cafe/",
+    "info": "Monday: Closed\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+  },
+  "T-WR-1": {
+    "name": "Bathroom",
+    "tags": ["Utilities"],
+    "thumbnail": "",
+    "url": "",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+
+  },
+  "T-WR-2": {
+    "name": "Bathroom",
+    "tags": ["Utilities"],
+    "thumbnail": "",
+    "url": "",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+
+  },
+  "C-K": {
+    "name": "Community Kitchen",
+    "tags": ["Utilities"],
+    "thumbnail": "",
+    "url": "",
+    "info": "Monday: CLOSED\nTuesday: 7:00am to 5:30pm\nWednesday: 9:00am to 5:30pm \nThursday: 9:00am to 5:30pm\nFriday: 7:00am to 9:00pm\nSaturday: 7:00am to 3:00pm\nSunday: CLOSED"
+
+  },
+  "S55": {
+    "name": "Vacant Stall",
+    "tags": [],
+    "thumbnail": "",
+    "url": "",
+    "info": ""
+  },
+  "wall": {
+    "name": "wall",
+    "tags": [],
+    "thumbnail": "",
+    "url": "",
+    "info": ""
+  }
 }
+
+
 
