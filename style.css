@@ -15,6 +15,19 @@ body {
   padding: 10rem 22rem; /* adjust as needed for spacing */
 }
 
+@media screen and (max-width: 1000px) {
+  html, body {
+    padding: 5vh 2vw;
+  }
+
+  #info-box {
+    top: 10vh !important;
+ 
+  }
+
+}
+  
+
 /* Header */
 header img {
   width: 100vw;
@@ -52,11 +65,10 @@ svg {
 /* Info Box */
 #info-box {
   position: fixed;
-  top: 45vh;
+  top: 35vh;
   right: 20px;
   width: 300px;
   background: #fff;
-
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   padding: 20px;
@@ -67,11 +79,51 @@ svg {
 
 #info-box h2 {
   margin-top: 0;
+  font-size: 1.5rem;
 }
 
 #info-box.active {
   display: block;
 }
+
+#stall-info {
+  white-space: pre-line;
+  line-height: 25px;
+  margin: 5px 0px;
+}
+
+#info-box h3 {
+  margin-top: 10px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+#info-box img{
+  width: auto;
+  height: 140px;
+}
+
+#stall-url{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px 24px;
+  border-radius: 10000px;
+  border: 1px solid #000;
+  color: black;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  transform-origin: center;
+  margin-top: 10px;
+}
+
+#stall-url:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
 
 /* Close Button */
 #close-btn {
@@ -164,3 +216,4 @@ svg {
   background: #a4634e;
   color: #fff;
 }
+
