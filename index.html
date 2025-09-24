@@ -33,7 +33,7 @@
     <button data-tag="Non-Produce">Non-Produce</button>
     <button data-tag="Nuts Confectionery & Coffee">Nuts Confectionery & Coffee</button>
     <button data-tag="Pop-Up">Pop-Up</button>
-    <button data-tag="Utilitys">Utilitys</button>
+    <button data-tag="Utilities">Utilities</button>
   </div>
 
  
@@ -41,14 +41,21 @@
     <div id="map-container"></div>
   </div>
 
-  <!-- Info Box -->
   <div id="info-box">
-    <button id="close-btn">Close</button>
+    <button id="close-btn" class="close-btn">✖</button>
     <h2 id="stall-name"></h2>
-    <p id="stall-tags"></p>
-    <img src="" alt="">
-    
+    <img id="stall-thumbnail" src="" alt="Stall Thumbnail" loading="lazy" />
+    <h3>Opening Hours:</h3>
+    <p id="stall-info"></p>
+    <a id="stall-url" href="" target="_blank" rel="noopener noreferrer">Visit Store</a>
   </div>
+
+
+
+ 
+
+
+
 <script>
 const mapWrapper = document.getElementById('map-wrapper');
 const mapContainer = document.getElementById('map-container');
@@ -59,6 +66,15 @@ const closeBtn = document.getElementById('close-btn');
 const tagButtons = document.querySelectorAll('#tag-buttons button');
 const searchInput = document.getElementById('search-input');
 const searchDropdown = document.getElementById('search-dropdown');
+
+
+// NEW elements inside info box
+
+const stallInfoEl = document.getElementById('stall-info');
+const stallThumbEl = document.getElementById('stall-thumbnail');
+const stallBtnEl = document.getElementById('stall-url');
+
+if (stallInfoEl) stallInfoEl.style.whiteSpace = 'pre-line'; // preserve line breaks
 
 let isPanning = false;
 let isDragging = false;
@@ -74,6 +90,7 @@ let lastDistance = null;
 
 let stalls = [];
 let stallElements = [];
+let stallDataGlobal = {}; // store JSON globally
 
 function updateTransform() {
   mapContainer.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
@@ -95,9 +112,7 @@ mapWrapper.addEventListener('mousemove', e => {
   const dx = e.clientX - dragStartX;
   const dy = e.clientY - dragStartY;
 
-  if (!isDragging && Math.sqrt(dx*dx + dy*dy) > dragThreshold) {
-    isDragging = true;
-  }
+  if (!isDragging && Math.sqrt(dx*dx + dy*dy) > dragThreshold) isDragging = true;
 
   if (isDragging) {
     translateX = startX + dx;
@@ -118,21 +133,30 @@ mapWrapper.addEventListener('mouseleave', () => {
   mapWrapper.style.cursor = 'grab';
 });
 
-// --- Mouse Wheel Zoom at Cursor ---
+// --- Mouse Wheel Zoom ---
 mapWrapper.addEventListener('wheel', e => {
-  e.preventDefault();
+  // Only prevent default if mouse is over the map container
   const rect = mapWrapper.getBoundingClientRect();
-  const offsetX = e.clientX - rect.left;
-  const offsetY = e.clientY - rect.top;
+  if (
+    e.clientX >= rect.left &&
+    e.clientX <= rect.right &&
+    e.clientY >= rect.top &&
+    e.clientY <= rect.bottom
+  ) {
+    e.preventDefault();
 
-  const scaleAmount = -e.deltaY * 0.001;
-  const newScale = Math.min(Math.max(0.5, scale + scaleAmount), 3);
+    const offsetX = e.clientX - rect.left;
+    const offsetY = e.clientY - rect.top;
 
-  translateX -= (offsetX - translateX) * (newScale / scale - 1);
-  translateY -= (offsetY - translateY) * (newScale / scale - 1);
+    const scaleAmount = -e.deltaY * 0.001;
+    const newScale = Math.min(Math.max(0.5, scale + scaleAmount), 3);
 
-  scale = newScale;
-  updateTransform();
+    translateX -= (offsetX - translateX) * (newScale / scale - 1);
+    translateY -= (offsetY - translateY) * (newScale / scale - 1);
+
+    scale = newScale;
+    updateTransform();
+  }
 });
 
 // --- Touch Pan & Pinch Zoom ---
@@ -158,9 +182,7 @@ mapWrapper.addEventListener('touchmove', e => {
     const dx = e.touches[0].clientX - dragStartX;
     const dy = e.touches[0].clientY - dragStartY;
 
-    if (!isDragging && Math.sqrt(dx*dx + dy*dy) > dragThreshold) {
-      isDragging = true;
-    }
+    if (!isDragging && Math.sqrt(dx*dx + dy*dy) > dragThreshold) isDragging = true;
 
     if (isDragging) {
       translateX = startX + dx;
@@ -178,10 +200,8 @@ mapWrapper.addEventListener('touchmove', e => {
     if (lastDistance) {
       const zoom = distance / lastDistance;
       const newScale = Math.min(Math.max(0.5, scale * zoom), 3);
-
       translateX -= (midX - translateX) * (newScale / scale - 1);
       translateY -= (midY - translateY) * (newScale / scale - 1);
-
       scale = newScale;
       updateTransform();
     }
@@ -197,11 +217,12 @@ mapWrapper.addEventListener('touchend', e => {
 
 // --- Load SVG & JSON ---
 Promise.all([
-      fetch('./Map-asset.svg').then(r => r.text()),
-      fetch('./stalls.json').then(r => r.json())
+  fetch('./Asset 10.svg').then(r => r.text()),
+  fetch('./stalls.json').then(r => r.json())
 ])
 .then(([svgText, stallData]) => {
   mapContainer.innerHTML = svgText;
+  stallDataGlobal = stallData;
 
   Object.keys(stallData).forEach(stallId => {
     const stallEl = document.getElementById(stallId);
@@ -218,7 +239,7 @@ Promise.all([
   // --- Highlight single stall ---
   stalls.forEach(stall => {
     stall.addEventListener('click', e => {
-      if (!isDragging) highlightStall(stall);
+      if (!isDragging) highlightStall(stall.id);
     });
   });
 
@@ -227,8 +248,11 @@ Promise.all([
     infoBox.classList.remove('active');
     stalls.forEach(s => {
       s.style.filter = 'none';
-      const r = s.querySelector('rect');
-      if (r) r.style.outline = 'none';
+      const shape = s.querySelector('rect, path, polygon, circle, ellipse, polyline');
+      if (shape) {
+        shape.style.stroke = 'none';
+        shape.style.strokeWidth = '0';
+      }
     });
   });
 
@@ -238,13 +262,12 @@ Promise.all([
       const tag = btn.dataset.tag.toLowerCase();
       stalls.forEach(s => {
         const stallTags = (s.dataset.tags || '').toLowerCase();
-        const rect = s.querySelector('rect');
-        if (!rect) return;
-        if (stallTags.includes(tag)) {
-          s.style.filter = 'none';
-          rect.style.outline = 'none';
-        } else {
-          s.style.filter = 'grayscale(100%)';
+        s.style.filter = stallTags.includes(tag) ? 'none' : 'grayscale(100%) opacity(30%)';
+
+        const shape = s.querySelector('rect, path, polygon, circle, ellipse, polyline');
+        if (shape) {
+          shape.style.stroke = 'none';
+          shape.style.strokeWidth = '0';
         }
       });
     });
@@ -257,19 +280,18 @@ Promise.all([
     if (!query) return searchDropdown.style.display = 'none';
 
     const matches = stallElements.filter(s => s.dataset.name.toLowerCase().includes(query));
-    if (matches.length === 0) return searchDropdown.style.display = 'none';
+    if (!matches.length) return searchDropdown.style.display = 'none';
 
     matches.forEach(s => {
       const div = document.createElement('div');
       div.textContent = s.dataset.name;
       div.addEventListener('click', () => {
-        highlightStall(s);
+        highlightStall(s.id);
         searchDropdown.style.display = 'none';
         searchInput.value = s.dataset.name;
       });
       searchDropdown.appendChild(div);
     });
-
     searchDropdown.style.display = 'block';
   });
 
@@ -279,36 +301,56 @@ Promise.all([
     }
   });
 
-  // --- Highlight function ---
-  function highlightStall(stall) {
+  // --- Highlight stall function ---
+  function highlightStall(stallId) {
+    const stallEl = document.getElementById(stallId);
+    if (!stallEl) return;
+
+    // Reset all stalls
     stalls.forEach(s => {
-      s.style.filter = 'grayscale(100%)';
-      const r = s.querySelector('rect');
-      if (r) r.style.outline = 'none';
+      s.style.filter = 'grayscale(100%) opacity(30%)';
+      const shape = s.querySelector('rect, path, polygon, circle, ellipse, polyline');
+      if (shape) {
+        shape.style.stroke = 'none';
+        shape.style.strokeWidth = '0';
+      }
     });
-    stall.style.filter = 'none';
-    const rect = stall.querySelector('rect');
-    if (rect) {
-      rect.style.outline = '3px solid #a4634e';
-      rect.style.outlineOffset = '2px';
+
+    // Highlight selected stall
+    stallEl.style.filter = 'none';
+    const shape = stallEl.querySelector('rect, path, polygon, circle, ellipse, polyline');
+    if (shape) {
+      shape.style.stroke = '#a4634e';
+      shape.style.strokeWidth = '3';
     }
-    stallNameEl.textContent = stall.dataset.name;
-    stallTagsEl.textContent = stall.dataset.tags ? "Tags: " + stall.dataset.tags : "No tags available.";
-    infoBox.classList.add('active');
+
+    const data = stallDataGlobal[stallId] || {};
+
+    // Update info box
+    if (stallNameEl) stallNameEl.textContent = data.name || '';
+    if (stallTagsEl) stallTagsEl.textContent = data.tags ? 'Tags: ' + data.tags.join(', ') : 'No tags available.';
+    if (stallThumbEl) {
+      stallThumbEl.src = data.thumbnail || '';
+      stallThumbEl.style.display = data.thumbnail ? 'block' : 'none';
+    }
+    if (stallInfoEl) stallInfoEl.textContent = data.info || '';
+    if (stallBtnEl) {
+      stallBtnEl.href = data.url || '#';
+      stallBtnEl.style.display = data.url ? 'inline-block' : 'none';
+    }
+
+    if (infoBox) infoBox.classList.add('active');
   }
 
 })
-.catch(err => console.error('Error loading SVG or JSON:', err));
+.catch(err => {
+  console.error('Error loading SVG or JSON:', err);
+  mapContainer.innerHTML = '<div style="color:red; font-size:1.2em; padding:20px;">Sorry, the market map could not be loaded. Please try again later.</div>';
+});
 </script>
+
 
 
 </body>
 </html>
-
-
-
-
-
-
-
 
